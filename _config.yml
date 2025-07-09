@@ -1,6 +1,2 @@
-# No theme applied — disables Jekyll layout
-# Minimal setup for raw HTML/Markdown rendering
-
-title: Balkar’s Clean Site
-description: Experiments, insights, and structured notes — without any theme.
+# No theme, no layout, just raw HTML rendering
 markdown: kramdown
