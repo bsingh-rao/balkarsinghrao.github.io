@@ -1,4 +1,6 @@
-title: Balkar's Digital Garden
-description: Experiments, insights, and learnings on AI, Marketing Automation, and Growth.
-theme: minima
-author: Balkar Singh Rao
+# No theme applied — disables Jekyll layout
+# Minimal setup for raw HTML/Markdown rendering
+
+title: Balkar’s Clean Site
+description: Experiments, insights, and structured notes — without any theme.
+markdown: kramdown
