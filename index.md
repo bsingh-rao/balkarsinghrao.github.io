@@ -5,16 +5,14 @@ title: Balkar Singh Rao
 
 # 👋 Welcome
 
-This is my digital garden — a growing collection of structured notes, guides, and playbooks on:
+This is my digital garden — a growing collection of structured notes on:
 
-- 🤖 [AI & Prompt Engineering](./ai/)
-- 📩 [Marketing Automation (Marketo)](./marketo/)
-- 🧠 [Career Logs & Reflections](./career/)
+- 🤖 [AI Notes](./ai/)
+- 📩 [Marketing Automation](./marketo/)
+- 🧠 [Career Reflections](./career/)
 
 ---
 
-## 🧰 About This Site
+## ✍️ About
 
-This site is built with [GitHub Pages](https://pages.github.com/) and powered by Markdown + Jekyll.
-
-No databases. No backend. Just words and structure.
+This site is powered by GitHub Pages + Markdown. No noise, just clarity.
