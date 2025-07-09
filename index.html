@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balkar's Garden</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111;
+      --link: #0066cc;
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #eee;
+      --link: #4dabf7;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+    nav {
+      width: 220px;
+      background: #f4f4f4;
+      padding: 2em 1em;
+      border-right: 1px solid #ccc;
+    }
+    [data-theme="dark"] nav {
+      background: #1f1f1f;
+      border-color: #333;
+    }
+    nav h2 {
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+    nav a {
+      display: block;
+      margin: 0.5em 0;
+      color: var(--link);
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      padding: 2em;
+    }
+    .toggle {
+      cursor: pointer;
+      background: none;
+      border: 1px solid var(--link);
+      color: var(--link);
+      padding: 0.5em 1em;
+      font-size: 0.9rem;
+      margin-bottom: 1em;
+    }
+    h1, h2 {
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h2>📚 Navigation</h2>
+    <a href="#about">About Me</a>
+    <a href="#work">My Work</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h1>About Me</h1>
+      <p>
+        I'm Balkar Singh Rao — a Marketing Automation Specialist with 12+ years of experience across 100+ Marketo clients.
+        I work at the intersection of marketing, AI, and systems thinking. This space is where I write, document, and reflect.
+      </p>
+    </section>
+
+    <section id="work">
+      <h2>My Work</h2>
+      <ul>
+        <li><strong>Adobe Marketo Engage</strong> – Nurture logic, lead lifecycle, integrations, and real-world campaign design</li>
+        <li><strong>AI and Experiments</strong> – Prompt engineering, LLM workflows, and agentic automations</li>
+        <li><strong>Career</strong> – Reflections and building meaningful digital leverage</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:balkarsingh.ubs@gmail.com">balkarsingh.ubs@gmail.com</a></p>
+    </section>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    }
+
+    // Optional: persist theme (localStorage)
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+    document.querySelector(".toggle").addEventListener("click", () => {
+      const newTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", newTheme);
+    });
+  </script>
+
+</body>
+</html>
