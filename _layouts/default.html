@@ -1,0 +1,35 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }}</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: ['class'] }</script>
+  <style>.transition-theme { transition: background-color .3s, color .3s; }</style>
+</head>
+<body class="flex h-screen bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-theme">
+
+  {% include sidebar.html %}
+
+  <main class="flex-1 overflow-y-auto p-8 space-y-12">
+    {{ content }}
+  </main>
+
+  <script>
+  // Theme toggle + persistence
+  const html = document.documentElement;
+  const stored = localStorage.getItem('theme');
+  if (stored==='dark' || (!stored && matchMedia('(prefers-color-scheme:dark)').matches)) {
+    html.classList.add('dark');
+  }
+  function toggleTheme() {
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', html.classList.contains('dark')?'dark':'light');
+  }
+  </script>
+
+</body>
+</html>
