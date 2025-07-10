@@ -1,86 +1,31 @@
-<!DOCTYPE html>
-<html lang="en" class="antialiased">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Balkar’s Garden</title>
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Configure Tailwind’s dark mode
-    tailwind.config = { darkMode: ['class'] }
-  </script>
-  <style>
-    /* Smooth transitions */
-    .transition-theme {
-      transition: background-color .3s, color .3s;
-    }
-  </style>
-</head>
-<body class="flex h-screen bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-theme">
+---
+layout: default
+title: Home
+---
 
-  <!-- Sidebar -->
-  <aside class="w-64 bg-gray-100 dark:bg-gray-800 p-6 space-y-6 flex flex-col">
-    <nav class="space-y-2 flex-1">
-      <a href="/about/index.html"                    class="block px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">About Me</a>
-      <a href="/linkedin-marketo-guides/index.html" class="block px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">LinkedIn Marketo Guides</a>
-      <a href="/marketo-user-groups/index.html"     class="block px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">Marketo User Groups</a>
-      <a href="/marketo-nation-blogs/index.html"    class="block px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">Marketo Nation Blogs</a>
-      <a href="/ai-experiments/index.html"          class="block px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">AI Experiments</a>
-      <a href="/ai/index.html"                      class="block px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">AI</a>
-      <a href="/career/index.html"                  class="block px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">Career</a>
-      <a href="/github-collaboration/index.html"    class="block px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">GitHub & Collaboration</a>
-      <a href="/youtube/index.html"                 class="block px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700">YouTube</a>
-    </nav>
-    <button
-      onclick="toggleTheme()"
-      class="mt-auto px-4 py-2 text-sm font-medium bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-theme"
-    >
-      Toggle Theme
-    </button>
-  </aside>
+<section id="about">
+  <h1 class="text-3xl font-bold mb-4">About Me</h1>
+  <p class="leading-relaxed">
+    I’m Balkar Singh Rao — a Marketing Automation Specialist with 12+ years of experience across 100+ Marketo clients.
+    I work at the intersection of marketing, AI, and systems thinking. This space is where I write, document, and reflect.
+  </p>
+</section>
 
-  <!-- Main Content (Homepage) -->
-  <main class="flex-1 overflow-y-auto p-8 space-y-12">
-    <section id="about">
-      <h1 class="text-3xl font-bold mb-4">About Me</h1>
-      <p class="leading-relaxed">
-        I’m Balkar Singh Rao — a Marketing Automation Specialist with 12+ years of experience across 100+ Marketo clients.
-        I work at the intersection of marketing, AI, and systems thinking. This space is where I write, document, and reflect.
-      </p>
-    </section>
+<section id="work">
+  <h2 class="text-2xl font-semibold mb-4">My Work</h2>
+  <ul class="list-disc list-inside space-y-2">
+    <li><strong>Adobe Marketo Engage</strong> – Nurture logic, lead lifecycle, integrations, and real-world campaign design</li>
+    <li><strong>AI and Experiments</strong> – Prompt engineering, LLM workflows, and agentic automations</li>
+    <li><strong>Career</strong> – Reflections and building meaningful digital leverage</li>
+  </ul>
+</section>
 
-    <section id="work">
-      <h2 class="text-2xl font-semibold mb-4">My Work</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li><strong>Adobe Marketo Engage</strong> – Nurture logic, lead lifecycle, integrations, and real-world campaign design</li>
-        <li><strong>AI and Experiments</strong> – Prompt engineering, LLM workflows, and agentic automations</li>
-        <li><strong>Career</strong> – Reflections and building meaningful digital leverage</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-      <p>
-        Email:
-        <a href="mailto:balkarsingh.ubs@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">
-          balkarsingh.ubs@gmail.com
-        </a>
-      </p>
-    </section>
-  </main>
-
-  <script>
-    // Theme toggle + persistence
-    const html = document.documentElement;
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      html.classList.add('dark');
-    }
-    function toggleTheme() {
-      html.classList.toggle('dark');
-      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-    }
-  </script>
-</body>
-</html>
+<section id="contact">
+  <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+  <p>
+    Email:
+    <a href="mailto:balkarsingh.ubs@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">
+      balkarsingh.ubs@gmail.com
+    </a>
+  </p>
+</section>
